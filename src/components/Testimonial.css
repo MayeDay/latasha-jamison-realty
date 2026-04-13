@@ -1,0 +1,126 @@
+.testimonial {
+  background: var(--charcoal);
+  padding: 100px 48px;
+}
+
+.testimonial__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Card ── */
+.testimonial__card {
+  margin-top: 48px;
+  transition: opacity 0.28s ease;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial__card--fade {
+  opacity: 0;
+}
+
+/* ── Stars ── */
+.testimonial__stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.testimonial__star {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+/* ── Quote ── */
+.testimonial__quote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(19px, 2.4vw, 28px);
+  color: var(--white);
+  line-height: 1.6;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 36px;
+  max-width: 680px;
+}
+
+/* ── Attribution ── */
+.testimonial__cite {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-style: normal;
+}
+
+.testimonial__name {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.testimonial__service {
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Controls ── */
+.testimonial__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 52px;
+}
+
+.testimonial__arrow {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.5);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: border-color 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial__arrow:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.testimonial__dots {
+  display: flex;
+  gap: 10px;
+}
+
+.testimonial__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.testimonial__dot--active {
+  background: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .testimonial {
+    padding: 60px 24px;
+  }
+}

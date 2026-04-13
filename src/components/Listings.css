@@ -1,0 +1,172 @@
+.listings {
+  background: var(--white);
+  padding: 100px 48px;
+}
+
+.listings__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Tabs ── */
+.listings__tab-nav {
+  display: flex;
+  gap: 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.listings__tab {
+  padding: 14px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+.listings__tab--active {
+  color: var(--dark);
+  border-bottom-color: var(--gold);
+  font-weight: 500;
+}
+
+/* ── Grid ── */
+.listings__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Card ── */
+.listing-card {
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.listing-card:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+.listing-card__placeholder {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.listing-card__info {
+  padding: 24px;
+}
+
+.listing-card__tag {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.listing-card__tag[data-style='sold'] {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.listing-card__price {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.listing-card__addr {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 4px 0 16px;
+}
+
+.listing-card__meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid #f0f0f0;
+  padding-top: 16px;
+}
+
+/* ── Empty state ── */
+.listings__empty {
+  text-align: center;
+  padding: 60px;
+  color: var(--muted);
+}
+
+.listings__empty p:first-child {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* ── CTA ── */
+.listings__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .listings {
+    padding: 60px 24px;
+  }
+  .listings__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Loading state ── */
+.listings__loading {
+  text-align: center;
+  padding: 60px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.listings__spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--gold-light);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ── Error state ── */
+.listings__error {
+  padding: 16px 20px;
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.listings__error p {
+  margin: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes spin { to { transform: rotate(360deg); } }

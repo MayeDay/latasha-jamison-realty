@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D5A3;
+  --dark: #1A1A1A;
+  --charcoal: #2C2C2C;
+  --cream: #F9F6F0;
+  --text: #333;
+  --muted: #777;
+  --white: #fff;
+  --ora-navy: #1B2A52;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ── Shared utility classes ── */
+.section-label {
+  display: block;
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.section-title em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--dark);
+  padding: 16px 36px;
+  border: 2px solid var(--gold);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  padding: 16px 36px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ── Fade-up animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,49 @@
+.footer {
+  background: #111;
+  padding: 32px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__logo {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__logo span {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+.footer__copy {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+
+.footer__eho {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 11px;
+}
+
+.footer__eho img {
+  height: 28px;
+  width: auto;
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+}

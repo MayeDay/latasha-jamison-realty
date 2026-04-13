@@ -1,0 +1,50 @@
+.affiliations {
+  background: var(--cream);
+  padding: 60px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.affiliations__label {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.affiliations__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+
+.affiliations__badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.affiliations__badge:hover {
+  opacity: 1;
+}
+
+.affiliations__badge img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.affiliations__badge span {
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
